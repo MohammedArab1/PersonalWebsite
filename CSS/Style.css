@@ -1,0 +1,44 @@
+.rightMargin {
+    margin-right: 600px;
+}
+
+
+.boxBorder {
+    padding-left:50px;
+    padding-right: 25px;
+}
+
+#mainTitle {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    font-weight: inherit;
+}
+
+.botPadding {
+    padding-bottom: 20px;
+}
+
+
+
+.iconStyle {
+    color: black;
+}
+
+
+
+.resumeFontSize {
+    font-size: smaller;
+}
+
+
+.li-margin {
+    margin-top: 1em;
+}
+
+#form {
+    display: flex;
+}
+
+#button {
+    margin-left: 1px;
+}
