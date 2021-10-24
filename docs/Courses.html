@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Mohammed Arab</title>
+    <link rel="stylesheet" href="./CSS/Style.css">
+    <!-- EXTERNAL STYLESHEET USING BOOTSTRAP FRAMEWORK. FROM: https://getbootstrap.com/-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- EXTERNAL STYLESHEET TO USE ICONS. FROM: https://fontawesome.com/-->
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="./JavaScript/Courses.JS"></script>
+</head>
+
+
+<body onload="showCourseNew(), display()">
+    
+<!-- Following is the Header for the website, shared between all three pages, using the bootstrap framework -->
+<div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="./Index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none rightMargin">
+            <span class="fs-4 h4">Mohammed Arab</span>
+        </a>
+
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="./Index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="./Resume.html" class="nav-link">Resume</a></li>
+            <li class="nav-item"><a href="./Courses.html" class="nav-link active">Courses</a></li>
+        </ul>
+    </header>
+</div>
+    
+
+<!-- Following is the Bulk of the Website (Courses page and everything within it) -->
+<div class="container">
+
+    <!-- First row, broken down into two columns, containing main title and search + filter + sort-->
+    <div class="row">
+        <div class="col-md-8 h1" id="mainTitle">
+            Interested in what courses I've taken? Look below!
+        </div>
+        <div class="col-md-4">
+            <!-- First row within the second column used for search-->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="input-group">
+                        <form id="form" onsubmit="removeTag(), searchCourse(document.getElementById('Search').value), event.preventDefault()">
+                        <input type="search" class="form-control rounded" placeholder="Search Courses" aria-label="Search" name="Search" id="Search"/>
+                        <button id="button" type="button" class="btn btn-outline-primary" onclick= "removeTag(), searchCourse(document.getElementById('Search').value)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg>
+                        </button>
+                        </form>
+                    </div>
+                </div>
+            <!-- Row placed in second column as separator-->
+            <div class="row"><ul></ul></div>
+
+                <!-- Filter option-->
+                <div class="col-md-12">
+                    <label class="lead"> Filter courses by level:</label>
+                    <select id="levelSelect" class="form-select form-select-sm" aria-label="Default select example">
+                        <option value="allLevels" selected onclick="add(lvl1), add(lvl2), display()">All levels</option>
+                        <option value="level1" onclick="add(lvl1), remove(lvl2), display()">Level 1</option>
+                        <option value="level2" onclick="add(lvl2), remove(lvl1), display()">Level 2</option>
+                    </select>
+                </div>
+                <!-- Sort option-->
+                <div class="col-md-12">
+                    <label class="lead"> Sort levels:</label>
+                    <select class="form-select form-select-sm" aria-label="Default select example">
+                        <option selected onclick="reOrder(lvl1)">Lowest to Highest</option>
+                        <option value="1" onclick="reOrder(lvl2)">Highest to Lowest</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div> <br>
+
+    <!-- Second row used to hold a main title-->
+    <div>
+    <div id="lvl1">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="h3">
+                    <b> Level 1</b>
+                </p>
+            </div>
+        </div>
+
+    <!-- Third row will hold level 1 courses-->
+    <div class="border boxBorder">
+        <div class="row">
+            <!-- Following are course titles and descriptions-->
+            <div class="row">
+                <div class="col-md-4">
+                    <p class="lead" id="1"></p>
+                </div>
+                <div class="col-md-4">
+                    <p class="lead" id="2"></p>
+                </div>
+                <div class="col-md-4">
+                    <p class="lead" id="3"> </p>
+                </div>
+            </div>
+        </div>
+        <!-- Following row will contain images for each class-->
+        <div class="row text-center">
+            <div class="col-lg-4">
+                <img src="./Images+files/CST8101.jpg" alt="Textbook Cover" height="200" width="150" class="rounded">
+            </div>
+            <div class="col-lg-4">
+                <img src="./Images+files/CST8116.jpg" alt="Textbook Cover" height="200" width="150" class="rounded">
+            </div>
+            <div class="col-lg-4">
+                <img src="./Images+files/CST8215.jpg" alt="Textbook Cover" height="200" width="150" class="rounded">
+            </div>
+        </div>
+        <!-- Row placed as separator-->
+        <div class="row"><ul></ul></div>
+
+        <!-- Following are course titles and descriptions-->
+        <div class="row">
+            <div class="col-md-4">
+                <p class="lead" id="4"></p>
+            </div>
+            <div class="col-md-4">
+                <p class="lead" id="5"></p>
+            </div>
+            <div class="col-md-4">
+                <p class="lead" id="6"></p>
+            </div>
+        </div>
+        <!-- Following row will contain images for each class-->
+        <div class="row text-center">
+            <div class="col-lg-4">
+                <img src="./Images+files/CST8300.jpg" alt="Business Ethics" height="250" width="300" class="rounded">
+            </div>
+            <div class="col-lg-4">
+                <img src="./Images+files/ENL1813.png" alt="Communication" height="250" width="300" class="rounded">
+            </div>
+            <div class="col-lg-4">
+                <img src="./Images+files/MAT8001.jpg" alt="Textbook Cover" height="200" width="150" class="rounded">
+            </div>
+        </div><br>
+    </div>
+        </div>
+        <div id="lvl2">
+        <!-- Following row will contain level 2 courses-->
+        <div class="row" id="lvl2">
+            <div class="col-md-12">
+                <p class="h3">
+                    <b> Level 2</b>
+                </p>
+            </div>
+        </div>
+
+            <div class="border boxBorder">
+                <div class="row">
+                    <!-- Following are course titles and descriptions-->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p class="lead" id="7"></p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="lead" id="8"></p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="lead" id="9"></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Following row will contain images for each class-->
+                <div class="row text-center">
+                    <div class="col-lg-4">
+                        <img src="./Images+files/CST2355.png" alt="DBMS" height="200" width="200" class="rounded">
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="./Images+files/CST8102.png" alt="linux Logo" height="130" width="225" class="rounded">
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="./Images+files/CST8284.jpg" alt="Textbook Cover" height="200" width="150" class="rounded">
+                    </div>
+                </div>
+                <!-- Row placed as separator-->
+                <div class="row"><ul></ul></div>
+                <!-- Following are course titles and descriptions-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="lead" id="10"></p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="lead" id="11"></p>
+                    </div>
+                </div>
+                <!-- Following row will contain images for each class-->
+                <div class="row text-center">
+                    <div class="col-lg-6">
+                        <img src="./Images+files/CST8285.jpg" alt="Textbook Cover" height="200" width="150" class="rounded">
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="./Images+files/ENL2019T.jpg" alt="Communication" height="250" width="250" class="rounded">
+                    </div>
+                </div><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Following is the Footer for the website, shared between all three pages, using the bootstrap framework -->
+<div class="container">
+    <footer class="row row-cols-3 py-3 my-3 border-top">
+        <div class="col">
+            <!-- Follow me column-->
+            <h5>
+                <b>Follow me</b> <br><br>
+                <a href="https://www.linkedin.com/in/mohammed-arab-15986b203/" target="_blank"> 
+                    <i class="fa fa-linkedin-square iconStyle fas fa-camera fa-lg" aria-hidden="true"></i>
+                </a>
+                <a href="https://guidedknowledge.wordpress.com/" target="_blank">
+                    <i class="fa fa-wordpress iconStyle fas fa-camera fa-lg" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com/MohammedArab1" target="_blank">
+                    <i class="fa fa-github iconStyle fas fa-camera fa-lg" aria-hidden="true"></i>
+                </a>
+            </h5>
+        </div>
+
+        <!-- Contact Me column-->
+        <div class="col">
+            <h5><b>Contact Me</b></h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-3 text-muted"> Phone: 613-700-4199</li>
+                <li class="nav-item mb-3 text-muted"> Email: arab0033@algonquinlive.com</li>
+            </ul>
+        </div>
+    
+        <!-- Navigate the website column-->
+        <div class="col">
+            <h5> <b> Navigate The Website </b> </h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-3"><a href="./Index.html" class="nav-link p-0 text-muted">Home</a></li>
+                <li class="nav-item mb-3"><a href="./Resume.html" class="nav-link p-0 text-muted">Resume</a></li>
+                <li class="nav-item mb-3"><a href="./Courses.html" class="nav-link p-0 text-muted">Courses</a></li>
+            </ul>
+        </div>
+    </footer>
+</div>
+
+
+</body>
+</html>
