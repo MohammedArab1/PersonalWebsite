@@ -25,7 +25,6 @@
 }
 
 
-
 .resumeFontSize {
     font-size: smaller;
 }
@@ -41,4 +40,8 @@
 
 #button {
     margin-left: 1px;
+}
+
+.iconUnderline:hover {
+    text-decoration: none;
 }
