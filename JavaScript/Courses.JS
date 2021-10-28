@@ -1,15 +1,16 @@
+//Function used to hide elements from webpage. Used when filtering courses by level.
 function remove(element) {
-    let x = element;
-    x.style.display = 'none';
+    document.getElementById(element).style.display = 'none';
 }
 
+//Function used to show elements on webpage. Used when filtering courses by level.
 function add(element) {
-    let x = element;
-    x.style.display = 'block';
+    document.getElementById(element).style.display = 'block'
 }
 
+//Function used sort levels. Takes element as parameter and places that element at the top of the page
 function reOrder(element) {
-    let content = element;
+    let content = document.getElementById(element);
     let parent = content.parentNode;
     parent.insertBefore(content, parent.firstChild);
 }
@@ -73,19 +74,24 @@ let course11 = {title:title11, description:desc11, id:id11, display:false}
 
 
 
-//CREATING LEVEL OBJECTS
+//The following are three 'level' objects, each representing a particular level of study and an option in the filter courses section.
 let allLevels = {title: 'allLevels', id: 'allLevels', display:false}
 let level1 = {title: 'level1', id: 'lvl1', display:false}
 let level2 = {title: 'level2', id: 'lvl2', display:false}
 
 
-// This is the array that contains all courses
+// The following list contains all the courses
 const courses = [course1, course2, course3, course4, course5, course6, course7, course8, course9, course10, course11];
+
+//The following list contains all levels.
 const levels = [allLevels, level1, level2];
+
+//The following list will contain all the courses that are currently displayed on the screen. Will be modified in the searchCourse() function.
 let coursesDisplayTrue = []
 
 
-
+//Each div element that is supposed to hold a course in the HTML file contains an ID 1 - 11.
+//The following function takes each of those div elements (using IDs) and adds to the HTML the appropriate course as defined above by iterating through the list of courses 
 function showCourseNew(){
     let id = 1
     for (let course of courses) {
@@ -97,22 +103,21 @@ function showCourseNew(){
 }
 
 
-function removeTag(){
-    let marks=document.getElementsByTagName('mark');
-    let counter = marks.length-1;
-    for(i=counter;i>=0;i--){
-        marks[i].outerHTML = marks[i].innerHTML;
-    }
-}
 
 
+
+//The following is the main function that will act allow for website search.
 function searchCourse(input) {
     let counter = 0
     let courseCounter = 0
+
+    //if the user searches for anything with 2 or less characters, do not return anything.
     if (input.length <= 2) {
         return
     }
 
+    //The following for loop checks to see which levels are currently being displayed. For each level that is displayed, 
+    //add the appropriate courses (that correspond to that level) to the coursesDisplayTrue list declared above. 
     for (let level of levels) {
         if (level.title === 'allLevels' && level.display === true) {
             coursesDisplayTrue = []
@@ -127,6 +132,11 @@ function searchCourse(input) {
             coursesDisplayTrue.push(course7, course8, course9, course10, course11)
         }
     }
+
+    /*
+    The following for loop goes through each course that is being displayed. It takes the contents (both the title and the description) and compares it with
+    the input of the user (which is a parameter of the function). If there is a match, highlight the text and scroll to the text that is matched.
+    */
     for (let course of coursesDisplayTrue) {
         let courseTitleLowerCase = course.title.toLowerCase();
         let courseDescLowerCase = course.description.toLowerCase();
@@ -134,7 +144,6 @@ function searchCourse(input) {
         
         if (courseTitleLowerCase.includes(inputLowerCase)) {
             document.getElementById(course.id).scrollIntoView({behavior:'smooth'});
-            //document.getElementById(course.id).innerHTML = document.getElementById(course.id).innerHTML.replace(course.title, "<mark id='20'>" + course.title + "</mark>" );
             let re = new RegExp(input, 'i');
             document.getElementById(course.id).innerHTML = document.getElementById(course.id).innerHTML.replace((course.title).match(re), "<mark id='20'>" + (course.title).match(re) + "</mark>" );
             counter += 1
@@ -143,7 +152,6 @@ function searchCourse(input) {
             courseCounter +=1
         }
 
-        //IF I DON'T WANT TO IMPLEMENT DESCRIPTION SEARCH I CAN REMOVE THE ENTIRE 'IF' BLOCK BELOW
         if (courseDescLowerCase.includes(inputLowerCase)) {
             document.getElementById(course.id).scrollIntoView({behavior:'smooth'});
             let re = new RegExp(input, 'i');
@@ -155,10 +163,12 @@ function searchCourse(input) {
         }
     }
 
+    //If there are 2 or more matches found, alert the user. If there is only a single match, the user will not be alerted.
     if (counter >= 2) {
         alert (counter + " Matches found")
     }
 
+    //If there are no matches found, alert the user that not match has been found
     else if (courseCounter === (coursesDisplayTrue.length)*2) {
         alert("No match found")
     }
@@ -166,6 +176,18 @@ function searchCourse(input) {
 }
 
 
+
+//The following function makes sure that after each new search, the previous highlighted text (from the previous search) will be removed.
+function removeTag(){
+    let marks=document.getElementsByTagName('mark');
+    let counter = marks.length-1;
+    for(i=counter;i>=0;i--){
+        marks[i].outerHTML = marks[i].innerHTML;
+    }
+}
+
+
+//the following function goes through each level in the list of levels declared above. If that level is selected in the 'filter', then change the display attribute of the level object to true.
 function display() {
     for (let level of levels) {
         if (document.getElementById('levelSelect').value === level.title){
@@ -178,7 +200,34 @@ function display() {
 }
 
 
+// Function below checks which of the options in the filter is selected and calls the appropriate 'add()' and 'remove()' functions
+function filterLevels(element) {
 
 
+    if (element === 'allLevels') {
+        add('lvl1');
+        add('lvl2');
+    }
+
+    else if (element === 'level1') {
+        add('lvl1');
+        remove('lvl2');
+    }
+
+    else if (element === 'level2') {
+        add('lvl2');
+        remove('lvl1');
+    }
+}
 
 
+// Function below checks which of the options in the sort is selected and calls the 'reOrder()' method with the appropriate parameters
+function sortLevels(element) {
+    if (element === '1') {
+        reOrder('lvl1');
+    }
+    else if (element === '2') {
+        reOrder('lvl2');
+    }
+
+}

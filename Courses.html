@@ -61,18 +61,18 @@
                 <!-- Filter option-->
                 <div class="col-md-12">
                     <label class="lead"> Filter courses by level:</label>
-                    <select id="levelSelect" class="form-select form-select-sm" aria-label="Default select example">
-                        <option value="allLevels" selected onclick="add(lvl1), add(lvl2), display()">All levels</option>
-                        <option value="level1" onclick="add(lvl1), remove(lvl2), display()">Level 1</option>
-                        <option value="level2" onclick="add(lvl2), remove(lvl1), display()">Level 2</option>
+                    <select id="levelSelect" class="form-select form-select-sm" aria-label="Default select example" onchange="filterLevels(this.value), display()">
+                        <option value="allLevels" selected >All levels</option>
+                        <option value="level1" >Level 1</option>
+                        <option value="level2">Level 2</option>
                     </select>
                 </div>
                 <!-- Sort option-->
                 <div class="col-md-12">
                     <label class="lead"> Sort levels:</label>
-                    <select class="form-select form-select-sm" aria-label="Default select example">
-                        <option selected onclick="reOrder(lvl1)">Lowest to Highest</option>
-                        <option value="1" onclick="reOrder(lvl2)">Highest to Lowest</option>
+                    <select class="form-select form-select-sm" aria-label="Default select example" onchange="sortLevels(this.value)">
+                        <option value="1" selected>Lowest to Highest</option>
+                        <option value="2">Highest to Lowest</option>
                     </select>
                 </div>
             </div>
