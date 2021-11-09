@@ -1,47 +1,52 @@
+/** Used for align the title in the navigation bar */
 .rightMargin {
     margin-right: 600px;
 }
 
-
+/** Styles the border in the resume + courses pages to fit the contents */
 .boxBorder {
     padding-left:50px;
     padding-right: 25px;
 }
 
+/** Grants the main title a particular font */
 #mainTitle {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 40px;
     font-weight: inherit;
 }
 
-.botPadding {
-    padding-bottom: 20px;
-}
 
 
-
+/** Styles the icons in the footer bar */
 .iconStyle {
     color: black;
 }
 
 
+/** Styles some of the Resume elements to be smaller, for better visual aesthetic */
 .resumeFontSize {
     font-size: smaller;
 }
 
 
+/** Used in the Resume page to style some of the resume elements to be properly separated from eachother */
 .li-margin {
     margin-top: 1em;
 }
 
+
+/** changes the form display in courses.html */
 #form {
     display: flex;
 }
 
+/** changes the button margin in courses.html */
 #button {
     margin-left: 1px;
 }
 
+/** Removes any underlining when hovering the icons in the footer bar. */
 .iconUnderline:hover {
     text-decoration: none;
 }
