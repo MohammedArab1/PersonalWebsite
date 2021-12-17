@@ -17,7 +17,7 @@ function reOrder(element) {
 
 
 //THE FOLLOWING WILL BE A DECLARATION OF OBJECTS. EACH COURSE WILL BE REPRESENTED AS A SINGLE OBJECT
-let title1 = "<b> <u> CST8101: Computer Essentials </u> </b> <br>"
+let title1 = "<b> <u>CST8101: Computer Essentials</u> </b> <br>"
 let desc1 = " <br> Learned the foundations of computer hardware and software, as well as how to create backups, and how to configure windows and virtual machine environment. Explored and worked with different numerical systems."
 let id1 = 1
 let course1 = {title:title1, description:desc1, id:id1, display:false}
@@ -25,44 +25,44 @@ let course1 = {title:title1, description:desc1, id:id1, display:false}
 let title2 = "<b> <u>CST8116: Introduction To Computer Programming</u></b> <br>"
 let desc2 = "Learned the foundational basics of computer programming in the Java language, including the use of sequential /selection / repetition structures, and object oriented programming techniques including abstraction, encapsulation, inheritance and polymorphism." 
 let id2 = 2
-let course2 = {title:title2, description:desc2, id:id2, display:false}
+let course2 = {title:title2, description:desc2, id:id2, display:false }
 
 let title3 = "<b> <u>CST8215: Introduction To Databases</u></b> <br>"
 let desc3 = "<br> Learned the fundamentals of relational databases via the learning of beginner + advanced SQL and database normalization." 
 let id3 = 3
-let course3 = {title:title3, description:desc3, id:id3, display:false}
+let course3 = {title:title3, description:desc3, id:id3, display:false }
 
-let title4 = "<b> <u> CST8300: Achieving Success in Changing Environments </u></b> <br>"
+let title4 = "<b> <u>CST8300: Achieving Success in Changing Environments</u></b> <br>"
 let desc4 = "Learned of the different potential nuances and ethical problems that are arising in the field of technology. Learned to work alone and with a team in applying critical thinking and decision making for difficult problems in our complex society." 
 let id4 = 4
-let course4 = {title:title4, description:desc4, id:id4, display:false}
+let course4 = {title:title4, description:desc4, id:id4, display:false }
 
-let title5 = "<b> <u> ENL1813: Communications 1 </u></b> <br>"
+let title5 = "<b> <u>ENL1813: Communications 1 </u></b> <br>"
 let desc5 = "<br>Learned business speaking and writing skills, alongside business documentation skills. Developed communication skills which will contribute to success in professional environments." 
 let id5 = 5
-let course5 = {title:title5, description:desc5, id:id5, display:false}
+let course5 = {title:title5, description:desc5, id:id5, display:false }
 
-let title6 = "<b> <u> MAT8001: Technical Mathematics for Computer Science </u></b> <br>"
+let title6 = "<b> <u>  MAT8001: Technical Mathematics for Computer Science </u></b> <br>"
 let desc6 = "Investigated and learned how to manipulate algebraic systems, how to work with different number systems (Binary, Octal, Decimal, Hexadecimal), and how to use boolean algebra and logic for problem solving." 
 let id6 = 6
-let course6 = {title:title6, description:desc6, id:id6, display:false}
+let course6 = {title:title6, description:desc6, id:id6, display:false }
 
-let title7 = "<b> <u>CST2355: Database Systems</u></b> <br>"
+let title7 = "<b> <u> CST2355: Database Systems</u></b> <br>"
 let desc7 = "<br> Acquired practical experience of different relational database systems including MS Access, Microsoft SQL Server, MySql and Oracle. Practical experience also extended to writing and running SQL, SQL scripts and PL/SQL blocks. Covered different database concepts such as case structures, rollup and cube operations, security + transaction control, and more." 
 let id7 = 7
-let course7 = {title:title7, description:desc7, id:id7, display:false}
+let course7 = {title:title7, description:desc7, id:id7, display:false }
 
 let title8 = "<b> <u>CST8102: Operating System Fundamentals (GNU/Linux)</u></b> <br>"
 let desc8 = "Learned through theoretical and practical means the details of operating system structures, process and storage managenment, configuration and administration. Developed skills using GNU/Linux command-line tools and utilities." 
 let id8 = 8
-let course8 = {title:title8, description:desc8, id:id8, display:false}
+let course8 = {title:title8, description:desc8, id:id8, display:false }
 
 let title9 = "<b> <u>CST8284: Object Oriented Programming (Java)</u></b> <br>"
 let desc9 = " Furthered my understanding of object oriented programming methodology and concepts, including abstraction, encapsulation, inheritance and polymorphism through theoretical and practical means." 
 let id9 = 9
 let course9 = {title:title9, description:desc9, id:id9, display:false}
 
-let title10 = "<b> <u> CST8285:Web Programming  </u></b> <br>"
+let title10 = "<b> <u>CST8285: Web Programming  </u></b> <br>"
 let desc10 = "<br> Learned web programming, design and implementation fundamentals through theoretical and practical experience of HTML, CSS, JavaScript and PHP." 
 let id10 = 10
 let course10 = {title:title10, description:desc10, id:id10, display:false}
@@ -72,25 +72,51 @@ let desc11 = "Developed the ability to communicate clearly and consicely in a te
 let id11 = 11
 let course11 = {title:title11, description:desc11, id:id11, display:false}
 
+let title12 = "<b> <u> CST2234: System Analysis and Design </u></b> <br> <br>"
+let desc12 = "Hands-on experience with case studies used to develop systems from inception through elaboration, construction and transition phases. Produced System specifications using modeling tools and techniques. Methodologies covered include: the systems development life cycle (SDLC), agile approach, rational unified process (RUP)and rapid application development (RAD).  " 
+let id12 = 12
+let course12 = {title:title12, description:desc12, id:id12, display:false}
+
+let title13 = "<b> <u> CST2335: Mobile Graphical Interface Programming </u></b> <br>"
+let desc13 = "Explored graphical user interface programming in a mobile Android environment and learned how to program applications using Android development tools." 
+let id13 = 13
+let course13 = {title:title13, description:desc13, id:id13, display:false}
+
+let title14 = "<b> <u> CST8109: Network Programming </u></b> <br> <br>"
+let desc14 = "Studied different network communication models, with an emphasis on data communications, TCP/IP protocol, socket programming and multi-threaded concepts." 
+let id14 = 14
+let course14 = {title:title14, description:desc14, id:id14, display:false}
+
+let title15 = "<b> <u>  CST8283: Business Programming </u></b> <br> <br>"
+let desc15 = "Created COBOL programs in a business environment. Topics studied include: output design, logic design tools, structured, top-down and modular coding, testing and debugging, and documentation." 
+let id15 = 15
+let course15 = {title:title15, description:desc15, id:id15, display:false}
+
+let title16 = "<b> <u>  CST8288: Object Oriented Programming with Design Patterns </u></b> <br>"
+let desc16 = "Learned best practices in Object Oriented Programming through software design patterns. Topics explored include: refactoring, domain modeling, JDBC and multithreaded servlet programming." 
+let id16 = 16
+let course16 = {title:title16, description:desc16, id:id16, display:false}
+
 
 
 //The following are three 'level' objects, each representing a particular level of study and an option in the filter courses section.
 let allLevels = {title: 'allLevels', id: 'allLevels', display:false}
 let level1 = {title: 'level1', id: 'lvl1', display:false}
 let level2 = {title: 'level2', id: 'lvl2', display:false}
+let level3 = {title: 'level3', id: 'lvl3', display:false}
 
 
 // The following list contains all the courses
-const courses = [course1, course2, course3, course4, course5, course6, course7, course8, course9, course10, course11];
+const courses = [course1, course2, course3, course4, course5, course6, course7, course8, course9, course10, course11, course12, course13, course14, course15, course16];
 
 //The following list contains all levels.
-const levels = [allLevels, level1, level2];
+const levels = [allLevels, level1, level2, level3];
 
 //The following list will contain all the courses that are currently displayed on the screen. Will be modified in the searchCourse() function.
 let coursesDisplayTrue = []
 
 
-//Each div element that is supposed to hold a course in the HTML file contains an ID 1 - 11.
+//Each div element that is supposed to hold a course in the HTML file contains an ID 1 - 16.
 //The following function takes each of those div elements (using IDs) and adds to the HTML the appropriate course as defined above by iterating through the list of courses 
 function showCourseNew(){
     let id = 1
@@ -121,7 +147,7 @@ function searchCourse(input) {
     for (let level of levels) {
         if (level.title === 'allLevels' && level.display === true) {
             coursesDisplayTrue = []
-            coursesDisplayTrue.push(course1,course2, course3, course4, course5, course6, course7, course8, course9, course10, course11)
+            coursesDisplayTrue.push(course1,course2, course3, course4, course5, course6, course7, course8, course9, course10, course11, course12, course13, course14, course15, course16)
         }
         else if (level.title === 'level1' && level.display === true) {
             coursesDisplayTrue = []
@@ -131,22 +157,30 @@ function searchCourse(input) {
             coursesDisplayTrue = []
             coursesDisplayTrue.push(course7, course8, course9, course10, course11)
         }
+        else if (level.title === 'level3' && level.display === true) {
+            coursesDisplayTrue = []
+            coursesDisplayTrue.push(course12, course13, course14, course15, course16)
+        }
     }
 
     /*
     The following for loop goes through each course that is being displayed. It takes the contents (both the title and the description) and compares it with
     the input of the user (which is a parameter of the function). If there is a match, highlight the text and scroll to the text that is matched.
     */
+
     for (let course of coursesDisplayTrue) {
         let courseTitleLowerCase = course.title.toLowerCase();
         let courseDescLowerCase = course.description.toLowerCase();
         let inputLowerCase = input.toLowerCase();
+
         
         if (courseTitleLowerCase.includes(inputLowerCase)) {
             document.getElementById(course.id).scrollIntoView({behavior:'smooth'});
-            let re = new RegExp(input, 'i');
-            document.getElementById(course.id).innerHTML = document.getElementById(course.id).innerHTML.replace((course.title).match(re), "<mark id='20'>" + (course.title).match(re) + "</mark>" );
-            counter += 1
+            let re = new RegExp(input, 'gi');
+            let re2 = new RegExp(input, 'gi');
+            document.getElementById(course.id).innerHTML = document.getElementById(course.id).innerHTML.replaceAll(re2, "<mark id='20'>" + (course.title).match(re) + "</mark>" );
+            let titleMatches = course.title.match(re).length
+            counter += course.title.match(re2).length
         }
         else {
             courseCounter +=1
@@ -155,13 +189,16 @@ function searchCourse(input) {
         if (courseDescLowerCase.includes(inputLowerCase)) {
             document.getElementById(course.id).scrollIntoView({behavior:'smooth'});
             let re = new RegExp(input, 'i');
-            document.getElementById(course.id).innerHTML = document.getElementById(course.id).innerHTML.replace((course.description).match(re), "<mark id='20'>" + (course.description).match(re) + "</mark>" );
-            counter += 1
+            let re2 = new RegExp(input, 'gi');
+            document.getElementById(course.id).innerHTML = document.getElementById(course.id).innerHTML.replace(re2, "<mark id='20'>" + (course.description).match(re) + "</mark>" );
+            counter += course.description.match(re2).length
         }
         else {
             courseCounter += 1
         }
     }
+
+
 
     //If there are 2 or more matches found, alert the user. If there is only a single match, the user will not be alerted.
     if (counter >= 2) {
@@ -207,16 +244,25 @@ function filterLevels(element) {
     if (element === 'allLevels') {
         add('lvl1');
         add('lvl2');
+        add('lvl3')
     }
 
     else if (element === 'level1') {
         add('lvl1');
         remove('lvl2');
+        remove('lvl3');
     }
 
     else if (element === 'level2') {
         add('lvl2');
         remove('lvl1');
+        remove('lvl3');
+    }
+
+    else if (element === 'level3') {
+        add('lvl3');
+        remove('lvl1');
+        remove('lvl2');
     }
 }
 
@@ -224,10 +270,12 @@ function filterLevels(element) {
 // Function below checks which of the options in the sort is selected and calls the 'reOrder()' method with the appropriate parameters
 function sortLevels(element) {
     if (element === '1') {
-        reOrder('lvl1');
+        reOrder('lvl2');
+        reOrder('lvl1')
     }
     else if (element === '2') {
         reOrder('lvl2');
+        reOrder('lvl3');
     }
 
 }

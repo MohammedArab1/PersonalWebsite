@@ -47,6 +47,10 @@
 }
 
 /** Removes any underlining when hovering the icons in the footer bar. */
-.iconUnderline:hover {
-    text-decoration: none;
+
+
+.iconUnderline:hover, .iconUnderline:focus, .iconUnderline:active, .iconUnderline {
+    text-decoration: none !important;
+    color: inherit !important;
 }
+
