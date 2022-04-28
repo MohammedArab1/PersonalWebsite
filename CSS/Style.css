@@ -54,3 +54,7 @@
     color: inherit !important;
 }
 
+.noLeftPadding {
+    padding-left:0px !important;
+}
+
