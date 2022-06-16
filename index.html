@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- EXTERNAL STYLESHEET TO USE ICONS. FROM: https://fontawesome.com/-->
     <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="./JavaScript/Courses.JS"></script>
 </head>
 
 
-<body>
- 
+<body onload="loadFade(['tf1', 'tf2', 'tf3'])">
+
 <!-- Following is the Header for the website, shared between all three pages, using the bootstrap framework -->
-<div class="container">
+<div class="container tf1">
     <nav class="navbar navbar-expand-lg navbar-light border-bottom justify-content-center py-3 mb-4">
         <a href="./index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none rightMargin">
             <span class="fs-4 h4">Mohammed Arab</span>
@@ -26,44 +27,30 @@
             <li class="nav-item"><a href="./index.html" class="nav-link active">Home</a></li>
             <li class="nav-item"><a href="./Resume.html" class="nav-link">Resume</a></li>
             <li class="nav-item"><a href="./Courses.html" class="nav-link">Courses</a></li>
+            <li class="nav-item"><a href="./SelectedProjects.html" class="nav-link">Selected Projects</a></li>
         </ul>
     </nav>
 </div>
 
-
-<!-- Main title for the Page-->
-
-<!--
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <h1 class="display-4" id="mainTitle"> Mohammed Arab</h1>
-        </div>
-    </div>
-</div>
--->
 
 <!-- Picture of myself + Telling the client a little bit about myself-->
 <div class="container">
     <!-- Inserting image of myself-->
     <div class="row flex-lg-row-reverse align-items-left g-5 py-5">
         <div class="col-10 col-sm-8 col-lg-5">
-            <img src="./Images+files/Me.jpg" class="d-block mx-lg-auto img-fluid rounded searchWidth" alt="Mohammed Arab Image" loading="lazy">
+            <img src="./Images+files/Me.jpg" class="d-block mx-lg-auto img-fluid rounded searchWidth tf2" alt="Mohammed Arab Image" loading="lazy">
         </div>
 
         <!-- Telling the client a little bit about myself-->
         <div class="col-lg-7">
-            <h1 class="display-5 fw-bold lh-1 mb-3">Hey, looks like you've reached my home page!</h1>
+            <h1 class="display-5 fw-bold lh-1 mb-3 tf1">Hey, looks like you've reached my home page!</h1>
             <p class="lead">
-                <b>While you're here, let me tell you a little bit about myself:</b>
-                <ul class="lead">
+                <b class="tf2">While you're here, let me tell you a little bit about myself:</b>
+                <ul class="lead tf3">
                     <li>
                         I'm currently a third semester student, studying Computer Programming at <a href="https://www.algonquincollege.com/" target="_blank">Algonquin College Ottawa</a>
                         while holding a Bachelor's Degree in Health Sciences from the <a  href="https://www2.uottawa.ca/en" target="_blank">University of Ottawa</a>.
                     </li><br>
-                    <!-- <li>
-                        I have many hobbies, including playing soccer and biking! But my personal favorite would have to be reading. My reading topics range across a variety of disciplines, including psychology, religious sciences and philsophy.
-                    </li> -->
                     <li>
                         Most of my current activities revolve around learning and studying Computer Programming. However, on my free time, I enjoy <a href="https://guidedknowledge.wordpress.com/" target="_blank">writing</a> and reading (with topics ranging from religious studies to psychology and sociology). 
                         I also attend weekly meetings to discuss with my community our role in promoting social justice.
@@ -72,7 +59,6 @@
                         I'm committed to continuously striving and working hard for my future and for the future of my family. I constantly look for creative ways to overcome new challenges and I am ready to tackle any obstacle thrown my way. 
                         I'm looking to apply my skills in a growing and important sector, which will help me achieve my long-term goal of being a valuable member in my community.
                     </li><br>
-
                 </ul>
         </div>
     </div>
@@ -80,7 +66,7 @@
 
 
 <!-- Following is the Footer for the website, shared between all three pages, using the bootstrap framework -->
-<div class="container">
+<div class="container tf1">
     <footer class="row row-cols-3 py-3 my-3 border-top">
         <div class="col">
             <!-- Follow me column-->
@@ -114,6 +100,7 @@
                 <li class="nav-item mb-3"><a href="./index.html" class="nav-link p-0 text-muted">Home</a></li>
                 <li class="nav-item mb-3"><a href="./Resume.html" class="nav-link p-0 text-muted">Resume</a></li>
                 <li class="nav-item mb-3"><a href="./Courses.html" class="nav-link p-0 text-muted">Courses</a></li>
+                <li class="nav-item mb-3"><a href="./SelectedProjects.html" class="nav-link p-0 text-muted">Selected Projects</a></li>
             </ul>
         </div>
     </footer>

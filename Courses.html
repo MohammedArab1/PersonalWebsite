@@ -14,10 +14,10 @@
 </head>
 
 
-<body onload="showCourseNew(), display()">
+<body onload="showCourseNew(), display(), loadFade(['tf1','tf2'])">
     
 <!-- Following is the Header for the website, shared between all three pages, using the bootstrap framework -->
-<div class="container">
+<div class="container tf1">
     <nav class="navbar navbar-expand-lg navbar-light border-bottom justify-content-center py-3 mb-4">
         <a href="./index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none rightMargin">
             <span class="fs-4 h4">Mohammed Arab</span>
@@ -27,13 +27,14 @@
             <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="./Resume.html" class="nav-link">Resume</a></li>
             <li class="nav-item"><a href="./Courses.html" class="nav-link active">Courses</a></li>
+            <li class="nav-item"><a href="./SelectedProjects.html" class="nav-link">Selected Projects</a></li>
         </ul>
     </nav>
 </div>
     
 
 <!-- Following is the Bulk of the Website (Courses page and everything within it) -->
-<div class="container">
+<div class="container tf2">
 
     <!-- First row, broken down into two columns, containing main title and search + filter + sort-->
     <div class="row">
@@ -231,7 +232,7 @@
 
 
 <!-- Following is the Footer for the website, shared between all three pages, using the bootstrap framework -->
-<div class="container">
+<div class="container tf1">
     <footer class="row row-cols-3 py-3 my-3 border-top">
         <div class="col">
             <!-- Follow me column-->
@@ -265,6 +266,7 @@
                 <li class="nav-item mb-3"><a href="./index.html" class="nav-link p-0 text-muted">Home</a></li>
                 <li class="nav-item mb-3"><a href="./Resume.html" class="nav-link p-0 text-muted">Resume</a></li>
                 <li class="nav-item mb-3"><a href="./Courses.html" class="nav-link p-0 text-muted">Courses</a></li>
+                <li class="nav-item mb-3"><a href="./SelectedProjects.html" class="nav-link p-0 text-muted">Selected Projects</a></li>
             </ul>
         </div>
     </footer>

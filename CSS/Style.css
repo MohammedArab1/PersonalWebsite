@@ -1,6 +1,6 @@
 /** Used for align the title in the navigation bar */
 .rightMargin {
-    margin-right: 600px;
+    margin-right: 450px;
 }
 
 /** Styles the border in the resume + courses pages to fit the contents */
@@ -58,3 +58,33 @@
     padding-left:0px !important;
 }
 
+
+.tf1{
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease-in;
+    -moz-transition: opacity .5s ease-in;
+        -ms-transition: opacity .5s ease-in;
+        -o-transition: opacity .5s ease-in;
+            transition: opacity .5s ease-in;
+}
+.tf2{
+    opacity: 0;
+    -webkit-transition: opacity 1.25s ease-in;
+    -moz-transition: opacity 1.25s ease-in;
+        -ms-transition: opacity 1.25s ease-in;
+        -o-transition: opacity 1.25s ease-in;
+            transition: opacity 1.25s ease-in;
+}
+
+.tf3 {
+    opacity: 0;
+    -webkit-transition: opacity 2s ease-in;
+    -moz-transition: opacity 2s ease-in;
+        -ms-transition: opacity 2s ease-in;
+        -o-transition: opacity 2s ease-in;
+            transition: opacity 2s ease-in;
+}
+
+.load {
+    opacity: 1;
+}

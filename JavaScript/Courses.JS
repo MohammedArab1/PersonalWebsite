@@ -16,7 +16,7 @@ function reOrder(element) {
 }
 
 
-//THE FOLLOWING WILL BE A DECLARATION OF OBJECTS. EACH COURSE WILL BE REPRESENTED AS A SINGLE OBJECT
+//THE FOLLOWING WILL BE A DECLARATION OF OBJECTS. EACH COURSE WILL BE REPRESENTED AS A SINGLE OBJECT (IF I MODIFY THIS IN THE FUTURE, PLEASE REPLACE ALL OF THIS WITH A FUNCTION THAT CAN DO IT ALL.)(22/05/11)
 let title1 = "<b> <u>CST8101: Computer Essentials</u> </b> <br>"
 let desc1 = " <br> Learned the foundations of computer hardware and software, as well as how to create backups, and how to configure windows and virtual machine environment. Explored and worked with different numerical systems."
 let id1 = 1
@@ -279,3 +279,13 @@ function sortLevels(element) {
     }
 
 }
+
+
+function loadFade(array) {
+    for (const element of array) {
+        var classNameArray = document.getElementsByClassName(element)
+        for (let i= 0; i<classNameArray.length; i++) {
+                classNameArray[i].className += " load"
+            } 
+        }
+    }
