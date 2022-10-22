@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selected Projects - Mohammed Arab</title>
-    <link rel="stylesheet" href="./CSS/Style.css">
     <!-- EXTERNAL STYLESHEET USING BOOTSTRAP FRAMEWORK. FROM: https://getbootstrap.com/-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/Style.css">
     <!-- EXTERNAL STYLESHEET TO USE ICONS. FROM: https://fontawesome.com/-->
     <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
     <script src="./JavaScript/Courses.JS"></script>
@@ -15,17 +15,21 @@
 <body onload="loadFade(['tf1', 'tf2', 'tf3'])">
     <!-- page header -->
     <div class="container tf1">
-        <nav class="navbar navbar-expand-lg navbar-light border-bottom py-3 mb-4">
-            <a href="./index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none rightMargin">
+        <nav class="navbar navbar-light border-bottom py-3 mb-4 justify-content-between">
+            <a href="./index.html" class=" text-dark text-decoration-none">
                 <span class="fs-4 h4">Mohammed Arab</span>
             </a>
-    
-            <ul class="nav nav-pills">
-                <li class="nav-item"><a href="./index.html" class="nav-link ">Home</a></li>
-                <li class="nav-item"><a href="./Resume.html" class="nav-link">Resume</a></li>
-                <li class="nav-item"><a href="./Courses.html" class="nav-link">Courses</a></li>
-                <li class="nav-item"><a href="./SelectedProjects.html" class="nav-link active">Selected Projects</a></li>
-            </ul>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNavDropdown" >
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="./index.html" class="nav-link ">Home</a></li>
+                    <li class="nav-item"><a href="./Resume.html" class="nav-link">Resume</a></li>
+                    <li class="nav-item"><a href="./Courses.html" class="nav-link">Courses</a></li>
+                    <li class="nav-item"><a href="./SelectedProjects.html" class="nav-link active">Selected Projects</a></li>
+                </ul>
+            </div>
         </nav>
     </div>
 
@@ -38,7 +42,7 @@
         </div> <br>
 
         <div class="row">
-            <div class="col-md-4 tf1">
+            <div class="col tf1">
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="./Images+files/React.png" alt="Card image cap">
                     <div class="card-body">
@@ -53,7 +57,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 tf2">
+            <div class="col tf2">
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="./Images+files/Python.jpg" alt="Card image cap">
                     <div class="card-body">
@@ -66,7 +70,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 tf3">
+            <div class="col tf3">
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="./Images+files/React-Native.png" alt="Card image cap">
                     <div class="card-body">
@@ -86,8 +90,8 @@
 
     <!-- footer -->
     <div class="container tf1">
-        <footer class="row row-cols-3 py-3 my-3 border-top">
-            <div class="col">
+        <footer class="row py-3 my-3 border-top">
+            <div class="col-8">
                 <!-- Follow me column-->
                 <h5>
                     <b>Follow me</b> <br><br>
@@ -104,26 +108,19 @@
             </div>
     
             <!-- Contact Me column-->
-            <div class="col">
+            <div class="col-auto">
                 <h5><b>Contact Me</b></h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-3 text-muted"> Phone: 613-700-4199</li>
                     <li class="nav-item mb-3 text-muted"> Email: arab0033@algonquinlive.com</li>
                 </ul>
             </div>
-        
-            <!-- Navigate the website column-->
-            <div class="col">
-                <h5> <b> Navigate The Website </b> </h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-3"><a href="./index.html" class="nav-link p-0 text-muted">Home</a></li>
-                    <li class="nav-item mb-3"><a href="./Resume.html" class="nav-link p-0 text-muted">Resume</a></li>
-                    <li class="nav-item mb-3"><a href="./Courses.html" class="nav-link p-0 text-muted">Courses</a></li>
-                    <li class="nav-item mb-3"><a href="./SelectedProjects.html" class="nav-link p-0 text-muted">Selected Projects</a></li>
-                </ul>
-            </div>
+                    
         </footer>
     </div>
 
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
