@@ -31,7 +31,7 @@
 
 
 /** Used in the Resume page to style some of the resume elements to be properly separated from eachother */
-.li-margin {
+li {
     margin-top: 1em;
 }
 

@@ -8,13 +8,22 @@
     <!-- EXTERNAL STYLESHEET USING BOOTSTRAP FRAMEWORK. FROM: https://getbootstrap.com/-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./CSS/Style.css">
-    <!-- EXTERNAL STYLESHEET TO USE ICONS. FROM: https://fontawesome.com/-->
+    <!-- EXTERNAL STYLESHEET TO USE ICONS. FROM: https://fontawesome.com/ -->
     <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
     <script src="./JavaScript/Courses.JS"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favIcon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favIcon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favIcon/favicon-16x16.png">
+    <link rel="manifest" href="/favIcon/site.webmanifest">
+    <link rel="mask-icon" href="/favIcon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favIcon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/favIcon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 
-<body class="bg-light" onload="loadFade(['tf1','tf2','tf3'])">
+<body onload="loadFade(['tf1','tf2','tf3'])">
 
 <!-- Following is the Header for the website, shared between all three pages, using the bootstrap framework -->
 <div class="container tf1">
@@ -40,243 +49,378 @@
 
 <!-- Main Title of the page-->
 <div class="tf2">
-<div class="container">
-    <div class="row">
-        <div class="col display-4 titleSize" id="mainTitle">
-            Take a Look at my Resume
-        </div>
-    </div> <br>
+    <div class="container">
+        <div class="row">
+            <div class="col display-4 titleSize" id="mainTitle">
+                Take a Look at my Resume
+            </div>
+        </div> <br>
 
-    <!-- Row containing Education, Experience and skills-->
-    <div class="row">
-        <!-- First column, which will hold education and experience-->
-        <div class="col-md-5">
-            <!-- Breaking the first column into two rows, to fit Education and Experience-->
-            <div class="row ">
-                <!-- First column, first row: Education-->
-                <div class="col-md-12 ">
-                    <p class="h3">
-                        Education:
-                        <ol class="lead">
-                            <li class="resumeFontSize" >
-                                <b>University of Ottawa: Bachelor's Degree in Health Sciences (September 2017 - April 2021)</b>
-                                <ul>
-                                    <li>Dean's Honor List, 2017-2021</li>
-                                    <li>Graduated <em>Summa Cum Laude</em> (Graduating GPA 9.31 / 10)</li>
-                                </ul>
-                            </li>
+        <!-- Row containing Education, Experience and skills-->
+        <div class="row">
+            <!-- First column, which will hold education and experience-->
+            <div class="col-lg-6 col-sm-12">
+                <!-- Breaking the first column into two rows, to fit Education and Experience-->
+                <div class="row ">
+                    <!-- First column, first row: Education-->
+                    <div class="col-12">
+                        <p class="h3">
+                            Education:
+                        </p>
+                        <div class="accordion" id="EducationAccordion">
+                            <div class="card ">
+                                <div class="card-header" id="EducationAccordionHeadingOne">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Algonquin College: Diploma in Computer Programming (CO-OP) (May 2021 - April 2023)
+                                        </button>
+                                    </h2>
+                                </div>
+                        
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#EducationAccordion">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>Learned about the fundamentals of computer programming. Program was focused on introducing students to the different fields of programming (web development, networking, etc.) with a focus on enhancing student self-research methods to be able to learn more deeply and efficiently any field we're more interested in on our own</li>
+                                            <li>Made it on the Dean's honor list (minimum 3.6 / 4.0 term GPA) for every academic semester as of January 2023</li>
+                                            <li >3.97 / 4.0 overall GPA as of January 2023</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            University of Ottawa: Bachelor's Degree in Health Sciences (September 2017 - April 2021) 
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#EducationAccordion">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>Program was mainly geared towards teaching students about the social determinants of health and the steps needed to introduce preventative, as opposed to reactive, health programs</li>
+                                            <li >Dean's Honor List, 2017-2021</li>
+                                            <li >Graduated <em>Summa Cum Laude</em> (Graduating GPA 9.31 / 10)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Creating a row for separation-->
+                    <div class="row"><ul></ul></div>
+                    <!-- First Column, second row: Experience-->
+                    <div class="col-12">
+                        <p class="h3">
+                            Experience:
+                        </p>
+                            <div class="accordion" id="ExperienceAccordion">
+                                <div class="card ">
+                                    <div class="card-header" id="ExperienceAccordionHeadingOne">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#ExperienceCollapseOne" aria-expanded="true" aria-controls="ExperienceCollapseOne">
+                                                Government of Canada, Department of Canadian Heritage: Web Application Java Developer
+                                            </button>
+                                        </h2>
+                                    </div>
+                            
+                                    <div id="ExperienceCollapseOne" class="collapse show" aria-labelledby="ExperienceAccordionHeadingOne" data-parent="#ExperienceAccordion">
+                                        <div class="card-body">
+                                            <ul>
+                                                <li>Worked with a small team to help develop and maintain Java-based web applications dedicated to Canadians.</li>
+                                                <li >Responsibilities included: Working on JSF web pages for component based front-end development, using JAVA for back-end functionality with Spring framework, writing SQL scripts for database modification, using Maven for project management and Jenkins for deployment automation, developing unit tests using Junit framework, and implementing / maintaining of MVC design pattern.</li>
+                                                <li >Work revolved around an open-source Java driven architecture, using Java, Linux, Tomcat, and Apache. Other tools used include Maven for project building and dependency-management, and Jenkins for deployment automation.</li>
+                                                <li >Throughout my experience, my team and I migrated our development environment to Microsoft Azure. Therefore I have experience with Azure for the development and deployment of web applications.</li>
+                                                <li >Responsible for upholding WCAG standards with Web Experience Toolkit (WET).</li>
+                                                <li >Learned to collaborate well with a team using SVN and Git as revision control systems.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
 
-                            <li class="resumeFontSize" >
-                                <b>Algonquin College: Diploma in Computer Programming (CO-OP) (May 2021 - December 2023)</b><br>
+                            <div class="card ">
+                                <div class="card-header" id="ExperienceAccordionHeadingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#ExperienceCollapseTwo" aria-expanded="true" aria-controls="ExperienceCollapseTwo">
+                                            University of Ottawa Microbiology Laboratory: Research Assistant
+                                        </button>
+                                    </h2>
+                                </div>
+                        
+                                <div id="ExperienceCollapseTwo" class="collapse" aria-labelledby="ExperienceAccordionHeadingTwo" data-parent="#ExperienceAccordion">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>Worked with a team of graduate and post-doctorate students to help them complete their experimental projects.</li>
+                                                <li>Conducted an academic research project looking at the effects of mutagenesis of specific mutations on bacteria <i>Pseudomonas fluorescens</i>.</li>
+                                                <li>Developed experience reading and analyzing scientific articles.</li>
+                                                <li>Refined critical thinking and problem-solving skills used in troubleshooting any research error.</li>
+                                                <li>Effectively communicated with team to ensure efficient and quick work in order to finish projects under time constraint.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Adding row in between for space -->
+                    <div class="row"> <ul></ul></div>
+                    <div class="col-12">
+                        <p class="h3">
+                            Volunteering Experience
+                        </p>
 
-                            </li>
+                        <div class="accordion" id="VolunteerExperienceAccordion">
+                            <div class="card ">
+                                <div class="card-header" id="VolunteerExperienceAccordionHeadingOne">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#VolunteerExperienceCollapseOne" aria-expanded="true" aria-controls="VolunteerExperienceCollapseOne">
+                                            Ronald McDonald House Charities: Family Room Manager
+                                        </button>
+                                    </h2>
+                                </div>
+                        
+                                <div id="VolunteerExperienceCollapseOne" class="collapse show" aria-labelledby="VolunteerExperienceAccordionHeadingOne" data-parent="#VolunteerExperienceAccordion">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>Worked alone or with a partner to manage 2 family rooms in weekly shifts of 5 hours.</li>
+                                            <li >Provided service and comfort to parents and children in need.</li>
+                                            <li >Developed a great sense of empathy and professional communication, along with great listening skills.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
 
-                        </ol>
-                </div>
-                <!-- Creating a row for separation-->
-                <div class="row"><ul></ul></div>
-                <!-- First Column, second row: Experience-->
-                <div class="col-md-12 ">
-                    <p class="h3">
-                        Experience:
-                        <ol class="lead">
-                            <li class="resumeFontSize">
-                                <b>University of Ottawa Microbiology Laboratory: Research Assistant</b>
-                                <ul>
-                                    <li>Worked with a team of graduate and post-doctorate students to help them complete their experimental projects.</li>
-                                    <li>Conducted an academic research project looking at the effects of mutagenesis of specific mutations on bacteria <i>Pseudomonas fluorescens</i>.</li>
-                                    <li>Developed experience reading and analyzing scientific articles.</li>
-                                    <li>Refined critical thinking and problem-solving skills used in troubleshooting any research error.</li>
-                                    <li>Effectively communicated with team to ensure efficient and quick work in order to finish projects under time constraint.</li>
-                                </ul><br>
-                            </li>
-                            <li class="resumeFontSize">
-                                <b>Prince Gourmet Fast Food Shawarma: Cashier and Cook</b>
-                                <ul>
-                                    <li>Worked while adhering to kitchen health and safety guidelines.</li>
-                                    <li>Developed ability to work under stressful conditions.</li>
-                                    <li>Developed fluent communication, listening and customer service skills, allowing me to better understand client needs.</li>
-                                    <li>Learned to multitask in busy situations, enabling me to complete more work in an efficient manner.</li>
-                                </ul>
-                            </li>
-                        </ol>
+
+                            <div class="card ">
+                                <div class="card-header" id="VolunteerExperienceAccordionHeadingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#VolunteerExperienceCollapseTwo" aria-expanded="true" aria-controls="VolunteerExperienceCollapseTwo">
+                                            Let's Talk Science: Classroom Presenter
+                                        </button>
+                                    </h2>
+                                </div>
+                        
+                                <div id="VolunteerExperienceCollapseTwo" class="collapse" aria-labelledby="VolunteerExperienceAccordionHeadingTwo" data-parent="#VolunteerExperienceAccordion">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>Performed presentations and fun activities with 6th grade students relating to space and space exploration to broaden the students’ understanding of science and space in particular.</li>
+                                            <li >Refined communication skills to effectively convey ideas to individuals of all ages, learning how to turn complex ideas into simple concepts.</li>
+                                            <li >Learned effective presentation techniques for different types of presentations and reports.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card ">
+                                <div class="card-header" id="VolunteerExperienceAccordionHeadingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#VolunteerExperienceCollapseThree" aria-expanded="true" aria-controls="VolunteerExperienceCollapseThree">
+                                            Al-Mahdi Community Center: Meeting Organizer / Sound Manager
+                                        </button>
+                                    </h2>
+                                </div>
+                        
+                                <div id="VolunteerExperienceCollapseThree" class="collapse" aria-labelledby="VolunteerExperienceAccordionHeadingThree" data-parent="#VolunteerExperienceAccordion">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>Help arrange and consistently attend weekly meetings discussing philosophy / Islamic theology / Islamic living in contemporary society.</li>
+                                            <li >Help with running the sound system and streaming during community meetings.</li>
+                                            <li >Help organize and set-up online book-club for community members.</li>
+                                            <li >Refined critical thinking skills to understand abstract philosophical notions.</li>
+                                            <li >Refined management skills to help setup the meetings.</li>
+                                            <li >Developed sense of leadership and responsibility as an active member of my community.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- Extra column in the middle used as a separator-->
-        <div class="col-md-1"></div>
-        <!-- Second column, which will hold Skills-->
-        <div class="col-md-6">
-            <!-- adding a row to the second column-->
-            <div class="row">
-                <!-- Adding another row to the second column-->
-                <div class="row boxBorder ">
-                        <!-- First row in second column holds Skills title-->
-                        <div class="col-lg-12">
-                            <p class="h3">
-                                Skills:
-                            </p>
+            <!-- Second column, which will hold Skills-->
+            <div class="col-lg-6 col-sm-12">
+                <p class="h3">
+                    Skills:
+                </p>
+                <div class="accordion" id="SkillsAccordion">
+                    <div class="card ">
+                        <div class="card-header" id="SkillsAccordionHeadingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#skillsCollapseOne" aria-expanded="true" aria-controls="skillsCollapseOne">
+                                    Programming languages
+                                </button>
+                            </h2>
                         </div>
-                        <!-- Second row in second column holds first few skills-->
-                        <div class="col-lg-3">
-                            <p class="lead"><b><u>Programming Languages</u></b>
+                
+                        <div id="skillsCollapseOne" class="collapse show" aria-labelledby="SkillsAccordionHeadingOne" data-parent="#SkillsAccordion">
+                            <div class="card-body">
                                 <ul>
                                     <li>Java</li>
                                     <li>Python</li>
-                                    <li>SQL</li>
+                                    <li>JavaScript / JSX</li>
+                                    <li>SQL / PLSQL</li>
                                     <li>HTML</li>
                                     <li>CSS</li>
-                                    <li>JavaScript</li>
                                     <li>PHP</li>
                                     <li>Bash/Shell</li>
                                 </ul>
+                            </div>
                         </div>
-                        <div class="col-lg-3">
-                            <p class="lead"><b> <u>Operating Systems</u></b>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header" id="SkillsAccordionHeadingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#skillsCollapseTwo" aria-expanded="false" aria-controls="skillsCollapseTwo">
+                                    Frameworks / Libraries
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="skillsCollapseTwo" class="collapse" aria-labelledby="SkillsAccordionHeadingTwo" data-parent="#SkillsAccordion">
+                            <div class="card-body">
                                 <ul>
-                                    <li>Windows</li>
-                                    <li>Linux</li>
-                                    <li>MacOS</li>
+                                    <li>React</li>
+                                    <li>React Native</li>
+                                    <li>Node.js</li>
+                                    <li>Express</li>
+                                    <li>Bootstrap</li>                          
+                                    <li>Spring</li>
+                                    <li>JSF</li>
+                                    <li>JUnit testing framework</li>
                                 </ul>
+                            </div>
                         </div>
-                        <div class="col-lg-5">
-                            <p class="lead"><b><u>Database Management Systems</u></b>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="SkillsAccordionHeadingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#skillsCollapseThree" aria-expanded="false" aria-controls="skillsCollapseThree">
+                                    Database Management Systems
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="skillsCollapseThree" class="collapse" aria-labelledby="SkillsAccordionHeadingThree" data-parent="#SkillsAccordion">
+                            <div class="card-body">
                                 <ul>
                                     <li>PostgreSQL</li>
                                     <li>MS Access</li>
                                     <li>Microsoft SQL server</li>
                                     <li>MySQL</li>
-                                    <li>Oracle</li>                          
+                                    <li>Oracle</li>
                                 </ul>
+                            </div>
                         </div>
-                            <!-- Third row in second column holds next set of skills-->
-                            <div class="col-lg-12">
-                                <p class="lead"><b><u>Software Tools</u></b>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="SkillsAccordionHeadingFour">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#skillsCollapseFour" aria-expanded="false" aria-controls="skillsCollapseFour">
+                                    Software Tools
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="skillsCollapseFour" class="collapse" aria-labelledby="SkillsAccordionHeadingFour" data-parent="#SkillsAccordion">
+                            <div class="card-body">
                                 <ul>
-                                    <li>Eclipse</li>
-                                    <li>Visual Studio Code</li>
-                                    <li>MySQL Workbench</li>
-                                    <li>Microsoft SQL server Management Studio (SSMS)</li>
+                                    <li>Apache Tomcat</li>
+                                    <li>Maven</li>
+                                    <li>Jenkins</li>
+                                    <li>Git / Github</li>
+                                    <li>SVN</li>
+                                    <li>Microsoft Azure</li>
+                                    <li>Sharepoint</li>
+                                    <li>Wireshark</li>
+                                    <li>Cisco packet tracer</li>
+                                    <li>Android Studio</li>
                                     <li>VMWare Workstation</li>
-                                    <li>XAMPP</li>
-                                    <li>Microsoft Office</li>
-                                    <li>PgAdmin / PgModeler</li>
-                                    <li>Git/Github</li>
-                                    <li>JUnit Testing</li>
-                                    <li>React / React Native JavaScript Framework</li>
                                 </ul>
                             </div>
-                            <!-- Fourth row in second column holds final set of skills-->
-                            <div class="col-lg-6">
-                                <p class="lead"><b><u>Program Related Skills</u></b>
-                                    <ul>
-                                        <li>Generated, tested, and maintained Java programs using Object-Oriented Methods with the ability to debug problems via manual techniques and program tools.</li>
-                                        <li class="li-margin">Created and manipulated well-designed database objects using SQL commands.</li>
-                                        <li class="li-margin">Demonstrated thorough theoretical and practical understanding of Operating System Fundamentals.</li>
-                                        <li class="li-margin">Acquired strong technical communication skills used to prepare detailed reports and give effective presentations through my academic experience at the University of Ottawa and Algonquin College, along with my volunteering experience.</li>
-                                    </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="SkillsAccordionHeadingFive">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#skillsCollapseFive" aria-expanded="false" aria-controls="skillsCollapseFive">
+                                    Programming related skills
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="skillsCollapseFive" class="collapse" aria-labelledby="SkillsAccordionHeadingFive" data-parent="#SkillsAccordion">
+                            <div class="card-body">
+                                <ul>
+                                    <li>Generated, tested, and maintained Java web applications (using JSF + Spring-MVC frameworks) using Object-Oriented techniques with the ability to debug problems using testing frameworks like JUnit.</li>
+                                    <li>Hands-on experience with front-end and back-end web development using HTML, CSS, JavaScript, PHP and Apache. This experience also includes using React and React Native for front-end web / mobile development, as well as Node.js and Express for back-end API creation.</li>
+                                    <li>Experience collaborating with team members using different revision control systems such as Git and SVN.</li>
+                                    <li>Created and manipulated well-designed database objects using SQL commands and PL/SQL functionality.</li>
+                                    <li>Acquired strong technical communication skills used to prepare detailed reports and give effective presentations through academic experience at the University of Ottawa and Algonquin College, along with volunteering experience.</li>
+                                </ul>
                             </div>
-                            <div class="col-lg-6">
-                                <p class="lead"><b><u>Additional Qualifications</u></b>
-                                    <ul>
-                                        <li>Finely honed communication and presentation skills with both supervisors and team members resulting from multiple years of academic, work and volunteer experience.</li>
-                                        <li class="li-margin">Ability to be a leader whilst learning from team members and listening to their ideas, as demonstrated by leadership roles through work experience and while volunteering, as well as leadership certificate.</li>
-                                        <li class="li-margin">Refined attention to detail and problem-solving skills resulting from conducting personal and professional projects requiring innovative thinking and creativity for solving.</li>
-                                        <li class="li-margin">Can work excellently in a team environment, with experience in conflict resolution.</li>
-                                        <li class="li-margin">Proficient in English, French and Arabic.</li>
-                                    </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="SkillsAccordionHeadingSix">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#skillsCollapseSix" aria-expanded="false" aria-controls="skillsCollapseSix">
+                                    Additional Qualifications
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="skillsCollapseSix" class="collapse" aria-labelledby="SkillsAccordionHeadingSix" data-parent="#SkillsAccordion">
+                            <div class="card-body">
+                                <ul>
+                                    <li>Proficient in English, French and Arabic.</li>
+                                    <li>Finely honed communication and presentation skills with both supervisors and team members resulting from multiple years of academic, work and volunteer experience.</li>
+                                    <li>Ability to be a leader whilst learning from team members and listening to their ideas, as demonstrated by leadership roles through work experience and while volunteering, as well as leadership certificate.</li>
+                                    <li>Refined attention to detail and problem-solving skills resulting from conducting personal and professional projects requiring innovative thinking and creativity for solving.</li>
+                                    <li>Can work excellently in a team environment, with experience in conflict resolution.</li>
+                                </ul>
                             </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    
+        
+        <!-- Adding row for extra space-->
+        <div class="row"><ul></ul></div>
 
-        <!--Adding row in between for space -->
-    <div class="row"> <ul></ul></div>
 
-    <!-- Row containing Volunteering experience, broken down into three columns-->
-    <div class="boxBorder">
+        <!-- Final row, broken down into two columns, containing goal and objectives + Download button for resume-->
         <div class="row">
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="h3">
-                        Volunteering Experience
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <p class="lead">
-                        <b><u>Ronald McDonald House Charities: Family Room Manager</u></b>
-                        <ul>
-                            <li>Worked alone or with a partner to manage 2 family rooms in weekly shifts of 5 hours.</li>
-                            <li class="li-margin">Provided service and comfort to parents and children in need.</li>
-                            <li class="li-margin">Developed a great sense of empathy and professional communication, along with great listening skills.</li>
-                        </ul>
-                </div>
-                <div class="col-md-4">
-                    <p class="lead">
-                        <b><u>Let's Talk Science: Classroom Presenter</u></b>
-                        <ul>
-                            <li>Performed presentations and fun activities with 6th grade students relating to space and space exploration to broaden the students’ understanding of science and space in particular.</li>
-                            <li class="li-margin">Refined communication skills to effectively convey ideas to individuals of all ages, learning how to turn complex ideas into simple concepts.</li>
-                            <li class="li-margin">Learned effective presentation techniques for different types of presentations and reports.</li>
-                        </ul>
-                </div>
-                <div class="col-md-4">
-                    <p class="lead">
-                        <b><u>Al-Mahdi Community Center: Meeting Organizer / Sound Manager</u></b>
-                        <ul>
-                            <li>Help arrange and consistently attend weekly meetings discussing philosophy / Islamic theology / Islamic living in contemporary society.</li>
-                            <li class="li-margin">In charge of running the sound system and streaming during community meetings.</li>
-                            <li class="li-margin">Help organize and set-up online book-club for community members.</li>
-                            <li class="li-margin">Refined critical thinking skills to understand abstract philosophical notions.</li>
-                            <li class="li-margin">Refined management skills to help setup the meetings.</li>
-                            <li class="li-margin">Developed sense of leadership and responsibility as an active member of my community.</li>
-                        </ul>
-                </div>             
+            <div class="col-md-9">
+                <p class="h3">
+                    My Goals and Objectives:
+                </p>
+                <ul>
+                    <li>Learn enough about full stack development to be able to code an entire application on my own sometime in the near future.</li>
+                    <li >Help bridge the gap between health-care and computer science (perhaps work on projects to help establish a national electronic health record in Canada).</li>
+                    <li >Establish a knowledge community, where each member is a contributing factor to the community's success.</li>
+                </ul>
             </div>
-        </div>
-    </div>
-    
-    <!-- Adding row for extra space-->
-    <div class="row"><ul></ul></div>
+            <div class="col-md-3">
+                <p class="h5">
+                    If you'd like an in-depth look at my resume, please download below!
+                </p><br>
 
+                <div class="row">
 
-    <!-- Final row, broken down into two columns, containing goal and objectives + Download button for resume-->
-    <div class="row align-items-center boxBorder">
-        <div class="col-md-9  ">
-            <p class="h3">
-                My Goals and Objectives:
-            </p>
-            <ul>
-                <li>Learn enough about full stack development to be able to code an entire application on my own sometime in the near future.</li>
-                <li class="li-margin">Help bridge the gap between health-care and computer science (perhaps work on projects to help establish a national electronic health record in Canada).</li>
-                <li class="li-margin">Establish a knowledge community, where each member is a contributing factor to the community's success.</li>
-            </ul>
-        </div>
-        <div class="col-md-3">
-            <p class="h5">
-                If you'd like an in-depth look at my resume, please download below!
-            </p><br>
-
-            <div class="row">
-
-                <div class="col">
-                    <form action="./Images+files/Resume.pdf">
-                        <button class="btn"><i class="fa fa-download"></i> Download Resume (PDF)</button>
-                    </form>
+                    <div class="col">
+                        <a href="./Images+files/Resume.pdf" target="_blank" class="iconUnderline"> <i class="fa fa-download"></i> Download Resume (PDF)</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 
 
 <!-- Following is the Footer for the website, shared between all three pages, using the bootstrap framework -->
-<div class="container tf1">
-    <footer class="row py-3 my-3 border-top">
-        <div class="col-8">
+<div class="container tf3">
+    <footer class="row py-3 my-3 border-top justify-content-between">
+        <div class="col">
             <!-- Follow me column-->
             <h5>
                 <b>Follow me</b> <br><br>
@@ -293,15 +437,13 @@
         </div>
 
         <!-- Contact Me column-->
-        <div class="col-auto">
+        <div class="col">
             <h5><b>Contact Me</b></h5>
-            <ul class="nav flex-column">
-                <li class="nav-item mb-3 text-muted"> Email: arab0033@algonquinlive.com</li>
-            </ul>
+            <p class="text-muted"> Email: arab0033@algonquinlive.com </p>
         </div>
-                
     </footer>
 </div>
+
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
