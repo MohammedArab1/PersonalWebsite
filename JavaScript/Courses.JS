@@ -73,7 +73,7 @@ let id11 = 11
 let course11 = {title:title11, description:desc11, id:id11, display:false}
 
 let title12 = "<b> <u> CST2234: System Analysis and Design </u></b> <br> <br>"
-let desc12 = "Hands-on experience with case studies used to develop systems from inception through elaboration, construction and transition phases. Produced System specifications using modeling tools and techniques. Methodologies covered include: the systems development life cycle (SDLC), agile approach, rational unified process (RUP)and rapid application development (RAD).  " 
+let desc12 = "Hands-on experience with case studies used to develop systems from inception through elaboration, construction and transition phases. Produced System specifications using modeling tools and techniques. Methodologies covered include: the systems development life cycle (SDLC), agile approach, rational unified process (RUP) and rapid application development (RAD).  " 
 let id12 = 12
 let course12 = {title:title12, description:desc12, id:id12, display:false}
 
@@ -92,11 +92,30 @@ let desc15 = "Created COBOL programs in a business environment. Topics studied i
 let id15 = 15
 let course15 = {title:title15, description:desc15, id:id15, display:false}
 
-let title16 = "<b> <u>  CST8288: Object Oriented Programming with Design Patterns </u></b> <br>"
+let title16 = "<b> <u>  CST8276: Object Oriented Programming with Design Patterns </u></b> <br>"
 let desc16 = "Learned best practices in Object Oriented Programming through software design patterns. Topics explored include: refactoring, domain modeling, JDBC and multithreaded servlet programming." 
 let id16 = 16
 let course16 = {title:title16, description:desc16, id:id16, display:false}
 
+let title17 = "<b> <u>  CST8276: Advanced Database Topics </u></b> <br>"
+let desc17 = "TODO" 
+let id17 = 17
+let course17 = {title:title17, description:desc17, id:id17, display:false}
+
+let title18 = "<b> <u>  CST8277: Enterprise Application Programming </u></b> <br>"
+let desc18 = "TODO" 
+let id18 = 18
+let course18 = {title:title18, description:desc18, id:id18, display:false}
+
+let title19 = "<b> <u>  CST8333: 	Programming Language Research Project </u></b> <br>"
+let desc19 = "TODO" 
+let id19 = 19
+let course19 = {title:title19, description:desc19, id:id19, display:false}
+
+let title20 = "<b> <u>  CST8334: Software Development Project </u></b> <br>"
+let desc20 = "TODO" 
+let id20 = 20
+let course20 = {title:title20, description:desc20, id:id20, display:false}
 
 
 //The following are three 'level' objects, each representing a particular level of study and an option in the filter courses section.
@@ -104,19 +123,21 @@ let allLevels = {title: 'allLevels', id: 'allLevels', display:false}
 let level1 = {title: 'level1', id: 'lvl1', display:false}
 let level2 = {title: 'level2', id: 'lvl2', display:false}
 let level3 = {title: 'level3', id: 'lvl3', display:false}
+let level4 = {title: 'level4', id: 'lvl4', display:false}
+
 
 
 // The following list contains all the courses
-const courses = [course1, course2, course3, course4, course5, course6, course7, course8, course9, course10, course11, course12, course13, course14, course15, course16];
+const courses = [course1, course2, course3, course4, course5, course6, course7, course8, course9, course10, course11, course12, course13, course14, course15, course16,course17,course18,course19,course20];
 
 //The following list contains all levels.
-const levels = [allLevels, level1, level2, level3];
+const levels = [allLevels, level1, level2, level3, level4];
 
 //The following list will contain all the courses that are currently displayed on the screen. Will be modified in the searchCourse() function.
 let coursesDisplayTrue = []
 
 
-//Each div element that is supposed to hold a course in the HTML file contains an ID 1 - 16.
+//Each div element that is supposed to hold a course in the HTML file contains an ID 1 - 20.
 //The following function takes each of those div elements (using IDs) and adds to the HTML the appropriate course as defined above by iterating through the list of courses 
 function showCourseNew(){
     let id = 1
@@ -127,9 +148,6 @@ function showCourseNew(){
         id ++
     }
 }
-
-
-
 
 
 //The following is the main function that will act allow for website search.
@@ -147,7 +165,9 @@ function searchCourse(input) {
     for (let level of levels) {
         if (level.title === 'allLevels' && level.display === true) {
             coursesDisplayTrue = []
-            coursesDisplayTrue.push(course1,course2, course3, course4, course5, course6, course7, course8, course9, course10, course11, course12, course13, course14, course15, course16)
+            courses.forEach((element) => {
+                coursesDisplayTrue.push(element)
+            })
         }
         else if (level.title === 'level1' && level.display === true) {
             coursesDisplayTrue = []
@@ -158,8 +178,14 @@ function searchCourse(input) {
             coursesDisplayTrue.push(course7, course8, course9, course10, course11)
         }
         else if (level.title === 'level3' && level.display === true) {
+            console.log('lvl 3 display true');
             coursesDisplayTrue = []
             coursesDisplayTrue.push(course12, course13, course14, course15, course16)
+        }
+        else if (level.title === 'level4' && level.display === true) {
+            console.log('lvl 4 display true');
+            coursesDisplayTrue = []
+            coursesDisplayTrue.push(course17, course18, course19, course20)
         }
     }
 
@@ -178,7 +204,8 @@ function searchCourse(input) {
             document.getElementById(course.id).scrollIntoView({behavior:'smooth'});
             let re = new RegExp(input, 'gi');
             let re2 = new RegExp(input, 'gi');
-            document.getElementById(course.id).innerHTML = document.getElementById(course.id).innerHTML.replaceAll(re2, "<mark id='20'>" + (course.title).match(re) + "</mark>" );
+            console.log(document.getElementById(course.id).innerHTML);
+            document.getElementById(course.id).innerHTML = document.getElementById(course.id).innerHTML.replaceAll(re2, "<mark id=highLightCourse"+course.id.toString()+">" + (course.title).match(re) + "</mark>" );
             let titleMatches = course.title.match(re).length
             counter += course.title.match(re2).length
         }
@@ -190,7 +217,10 @@ function searchCourse(input) {
             document.getElementById(course.id).scrollIntoView({behavior:'smooth'});
             let re = new RegExp(input, 'i');
             let re2 = new RegExp(input, 'gi');
-            document.getElementById(course.id).innerHTML = document.getElementById(course.id).innerHTML.replace(re2, "<mark id='20'>" + (course.description).match(re) + "</mark>" );
+            console.log(re2);
+            console.log(re);
+            console.log(document.getElementById(course.id).innerHTML);
+            document.getElementById(course.id).innerHTML = document.getElementById(course.id).innerHTML.replace(re2, "<mark id=highLightCourse"+course.id.toString()+">" + (course.description).match(re) + "</mark>" );
             counter += course.description.match(re2).length
         }
         else {
@@ -240,42 +270,56 @@ function display() {
 // Function below checks which of the options in the filter is selected and calls the appropriate 'add()' and 'remove()' functions
 function filterLevels(element) {
 
-
     if (element === 'allLevels') {
         add('lvl1');
         add('lvl2');
-        add('lvl3')
+        add('lvl3');
+        add('lvl4')
     }
 
     else if (element === 'level1') {
         add('lvl1');
         remove('lvl2');
         remove('lvl3');
+        remove('lvl4');
     }
 
     else if (element === 'level2') {
         add('lvl2');
         remove('lvl1');
         remove('lvl3');
+        remove('lvl4');
     }
 
     else if (element === 'level3') {
         add('lvl3');
         remove('lvl1');
         remove('lvl2');
+        remove('lvl4');
+    }
+
+    else if (element === 'level4') {
+        add('lvl4');
+        remove('lvl1');
+        remove('lvl2');
+        remove('lvl3');
     }
 }
 
 
 // Function below checks which of the options in the sort is selected and calls the 'reOrder()' method with the appropriate parameters
 function sortLevels(element) {
-    if (element === '1') {
-        reOrder('lvl2');
-        reOrder('lvl1')
+    if (element === 'lowestToHighest') {
+        for (let i = levels.length-1; i > 0; i-- ) {
+            const reOrderLevel = "lvl" + i.toString()
+            reOrder(reOrderLevel)
+        }
     }
-    else if (element === '2') {
-        reOrder('lvl2');
-        reOrder('lvl3');
+    else if (element === 'highestToLowest') {
+        for (let i = 1; i < levels.length; i++ ) {
+            const reOrderLevel = "lvl" + i.toString()
+            reOrder(reOrderLevel)
+        }
     }
 
 }
