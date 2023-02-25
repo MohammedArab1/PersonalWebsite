@@ -72,13 +72,13 @@ let desc11 = "Developed the ability to communicate clearly and consicely in a te
 let id11 = 11
 let course11 = {title:title11, description:desc11, id:id11, display:false}
 
-let title12 = "<b> <u> CST2234: System Analysis and Design </u></b> <br> <br>"
+let title12 = "<b> <u> CST2234: System Analysis and Design </u></b> <br>"
 let desc12 = "Hands-on experience with case studies used to develop systems from inception through elaboration, construction and transition phases. Produced System specifications using modeling tools and techniques. Methodologies covered include: the systems development life cycle (SDLC), agile approach, rational unified process (RUP) and rapid application development (RAD).  " 
 let id12 = 12
 let course12 = {title:title12, description:desc12, id:id12, display:false}
 
 let title13 = "<b> <u> CST2335: Mobile Graphical Interface Programming </u></b> <br>"
-let desc13 = "Explored graphical user interface programming in a mobile Android environment and learned how to program applications using Android development tools." 
+let desc13 = "Explored graphical user interface programming in a mobile Android environment and learned how to program applications using Android development tools. Developed an Android Covid-19 Tracker tool." 
 let id13 = 13
 let course13 = {title:title13, description:desc13, id:id13, display:false}
 
@@ -93,37 +93,40 @@ let id15 = 15
 let course15 = {title:title15, description:desc15, id:id15, display:false}
 
 let title16 = "<b> <u>  CST8276: Object Oriented Programming with Design Patterns </u></b> <br>"
-let desc16 = "Learned best practices in Object Oriented Programming through software design patterns. Topics explored include: refactoring, domain modeling, JDBC and multithreaded servlet programming." 
+let desc16 = "Learned best practices in Object Oriented Programming through software design patterns. Topics explored include: refactoring, domain modeling, JDBC, MVC architecture, multithreaded servlet programming, and more." 
 let id16 = 16
 let course16 = {title:title16, description:desc16, id:id16, display:false}
 
 let title17 = "<b> <u>  CST8276: Advanced Database Topics </u></b> <br>"
-let desc17 = "TODO" 
+let desc17 = "Gained proficiency in the Oracle database environment while learning database administration techniques. Topics include: Oracle architecture, backup & recovery, security, data warehousing and more. Also learned fundamentals of noSQL databases including mongoDB. " 
 let id17 = 17
 let course17 = {title:title17, description:desc17, id:id17, display:false}
 
 let title18 = "<b> <u>  CST8277: Enterprise Application Programming </u></b> <br>"
-let desc18 = "TODO" 
+let desc18 = "Explored the Java EE environment for the creation of Java based web applications. Technologies studied include: servlets, JSP, JSF, JPA / Hibernate, REST, and Java EE / web security" 
 let id18 = 18
 let course18 = {title:title18, description:desc18, id:id18, display:false}
 
 let title19 = "<b> <u>  CST8333: 	Programming Language Research Project </u></b> <br>"
-let desc19 = "TODO" 
+let desc19 = "Tasked with independently learning a programming language and applying concepts by building a project. I decided to learn C# in the ASP.NET environment for the development of a web application implementing CRUD functionalities." 
 let id19 = 19
 let course19 = {title:title19, description:desc19, id:id19, display:false}
 
 let title20 = "<b> <u>  CST8334: Software Development Project </u></b> <br>"
-let desc20 = "TODO" 
+let desc20 = "Worked with a team of 4 other students with a real-life client (Lykka Village) to help them build their web application. This was full-stack web development with the MERN stack. Developed front-end UI using React, and back-end functionality using Node.JS and Express." 
 let id20 = 20
 let course20 = {title:title20, description:desc20, id:id20, display:false}
 
 
 //The following are three 'level' objects, each representing a particular level of study and an option in the filter courses section.
 let allLevels = {title: 'allLevels', id: 'allLevels', display:false}
-let level1 = {title: 'level1', id: 'lvl1', display:false}
-let level2 = {title: 'level2', id: 'lvl2', display:false}
-let level3 = {title: 'level3', id: 'lvl3', display:false}
+// let level1 = {title: 'level1', id: 'lvl1', display:false}
+// let level2 = {title: 'level2', id: 'lvl2', display:false}
+// let level3 = {title: 'level3', id: 'lvl3', display:false}
 let level4 = {title: 'level4', id: 'lvl4', display:false}
+let level3 = {title: 'level3', id: 'lvl3', display:false}
+let level2 = {title: 'level2', id: 'lvl2', display:false}
+let level1 = {title: 'level1', id: 'lvl1', display:false}
 
 
 
@@ -131,7 +134,7 @@ let level4 = {title: 'level4', id: 'lvl4', display:false}
 const courses = [course1, course2, course3, course4, course5, course6, course7, course8, course9, course10, course11, course12, course13, course14, course15, course16,course17,course18,course19,course20];
 
 //The following list contains all levels.
-const levels = [allLevels, level1, level2, level3, level4];
+const levels = [allLevels, level4, level3, level2, level1];
 
 //The following list will contain all the courses that are currently displayed on the screen. Will be modified in the searchCourse() function.
 let coursesDisplayTrue = []
@@ -271,10 +274,10 @@ function display() {
 function filterLevels(element) {
 
     if (element === 'allLevels') {
-        add('lvl1');
-        add('lvl2');
+        add('lvl4');
         add('lvl3');
-        add('lvl4')
+        add('lvl2');
+        add('lvl1')
     }
 
     else if (element === 'level1') {
@@ -334,8 +337,3 @@ function loadFade(array) {
         }
     }
 
-
-function toggleDarkMode() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-}
